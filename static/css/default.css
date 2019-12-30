@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+body{
+    --DarkThemeBackground: #000000;
+    --DarkThemeColor: #ffffff;
+    --transparent: rgba(0,0,0,0);
+    --ThemeColor1: rgba(255,255,255,0.1);
+    --ThemeColor2: rgba(255,255,255,0.2);
+    --ThemeColor3: rgba(255,255,255,0.3);
+    --ThemeColor4: rgba(255,255,255,0.4);
+    --DThemeColor: rgba(0,0,0,0.8);
+
+    --fontSize: 1em;
+    --fontFamily: Arial, Helvetica, sans-serif;
+    font-family: var(--fontFamily);
+    cursor: default;
+    overflow: hidden;
+    font-size: var(--fontSize);
+    color: var(--DarkThemeColor);
+}
+
+#scroll{
+    scroll-behavior: smooth;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.none{
+    display: none;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}

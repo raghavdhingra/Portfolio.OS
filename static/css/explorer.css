@@ -1,0 +1,145 @@
+.explorer{
+    position: fixed;
+    width: 60vw;
+    height: 80vh;
+    box-sizing: border-box;
+    border: 1px solid var(--ThemeColor3);
+    box-shadow: 0 0 5px 0 var(--ThemeColor3);
+    margin: 10vh 20vw;
+    opacity: 0;
+    background: var(--DarkThemeBackground);
+    color: var(--DarkThemeColor);
+    animation: popUp 0.5s 0.2s 1 ease forwards;
+}
+
+@keyframes popUp{
+    from {opacity: 0;transform: scale(0.85);}
+    to {opacity: 1;transform: scale(1);}
+}
+
+.title-bar{
+    padding: 0.5em;
+}
+
+.title-icon{
+    margin: 0 0.2em;
+    display: inline-block;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    font-size: 10px;
+    line-height: 22px;
+    vertical-align: middle;
+    background: var(--ThemeColor4);
+    transition: 0.2s;
+}
+
+.title-icon:hover{
+    background: var(--DarkThemeColor);
+}
+
+.title-icon:hover i{
+    color: var(--DThemeColor);
+}
+
+.fa-minus::before{
+    position: relative;
+    left: 1.5px;
+}
+
+.cross{
+    background: rgb(212,19,37);
+}
+
+.title-icon i{
+    position: relative;
+    left: 1.5px;
+}
+
+.fa-times::before{
+    position: relative;
+    left: 2px;
+}
+
+.explorer-title{
+    display: inline-block;
+    float: right;
+    font-weight: bold;
+}
+
+.minimize{
+    animation: minimize 0.3s ease 1 forwards;
+}
+
+@keyframes minimize{
+    from{
+        opacity: 1;
+        transform: scale(1) translate(0,0);
+    }
+    to{
+        opacity: 0;
+        transform: scale(0.5) translate(-150%,150%);
+    }
+}
+
+.explorer-content{
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+    border: 2px solid var(--ThemeColor4);
+    height: 75vh;
+}
+
+.explorer-content > div{
+    height: 100%;
+    width: 100%;
+}
+
+.explorer-frame{
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.url-bar,.search{
+    margin: 0.2em;
+    padding: 0.2em 1em;
+    font-size: 1.1em;
+    color: var(--DThemeColor);
+    border-radius: 30px;
+    border: none;
+}
+
+input[type="text"]{
+    width: 40%;
+}
+
+.fa-search{
+    margin: 0 0.5em;
+}
+
+.url-bar:focus,.search:focus{
+    outline: none;
+}
+
+@media screen and (max-width: 1200px){
+    .explorer{
+        height: 80vh;
+        width: 70vw;
+        margin: 10vh 15vw;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .explorer{
+        height: 80vh;
+        width: 90vw;
+        margin: 10vh 5vw;
+    }
+}
+
+.maximize{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}

@@ -1,0 +1,156 @@
+.desktop-icons{
+    width: max-content;
+    text-align: center;
+    display: flexbox;
+    padding: 0.5em;
+    background: var(--transparent);
+    border: 1px solid var(--transparent);
+    box-sizing: border-box;
+    border-radius: 1px;
+    transition: 0.08s;
+    color: #fff;
+}
+.desktop-icons:hover{
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+.desktop-icons:active{
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.4);
+}
+.desktop-container{
+    overflow: hidden;
+    height: 98vh;
+    margin: 1vh 1em;
+}
+.upper-bar{
+    padding: 0.5em;
+    text-align: center;
+    background: var(--DThemeColor);
+}
+.setting-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.setting-item{
+    transition: 0.1s;
+    margin: 0.5em auto;
+    text-align: center;
+    cursor: default;
+    border: 0.05em solid var(--transparent);
+    font-size: 0.8em;
+    color: var(--DarkThemeColor);
+    padding: 1em;
+    height: 100px;
+    width: 100px;
+}
+.setting-item:hover{
+    border: 0.05em solid var(--ThemeColor4);
+    background: var(--ThemeColor1);
+}
+.setting-item:active{
+    transform: scale(0.95);
+}
+#setting-content{
+    overflow-y: scroll;
+}
+#setting-content::-webkit-scrollbar{
+    width: 0;
+}
+.setting-on-click{
+    text-align: center;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    margin: 0 1em;
+    border: 0.05em solid var(--ThemeColor3);
+    animation: settingAnim 1s ease-in-out 1 forwards;
+}
+.color-palette{
+    height: 50px;
+    overflow: hidden;
+    width: 50px;
+    background: white;
+    border: 0.2em solid var(--ThemeColor4);
+    display: inline-flex;
+    transition: 0.1s;
+    margin: 0 0.5em;
+}
+.font-palette{
+    color: var(--DarkThemeColor);
+    display: inline-flex;
+    margin: 0 0.5em;
+    transition: 0.1s;
+    padding: 0.2em;
+    border: 0.2em solid var(--DarkThemeColor);
+}
+.size-palette{
+    color: var(--DarkThemeColor);
+    display: inline-flex;
+    margin: 0 0.5em;
+    transition: 0.1s;
+    padding: 0.5em;
+    border: 0.2em solid var(--DarkThemeColor);
+}
+
+.color-palette-active{
+    border: 0.2em solid white;
+    animation: borderActive 0.5s ease 0.5s 1 forwards;
+}
+
+@keyframes borderActive{
+    from {border-color: white;}
+    to{border-color: #0077bb;}
+}
+@keyframes settingAnim{
+    from {height: 0;padding: 0;}
+    to{height: 100px;padding: 1em 0;}
+}
+
+.color-palette:hover,.color-palette-active:hover,.font-palette:hover,.size-palette:hover{
+    border-color: #aaaaaa;
+}
+
+@media screen and (max-width: 1150px){
+    .setting-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width: 950px){
+    .setting-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (min-width: 800px){
+    .upper-bar{
+        display: none;
+    }
+}
+@media screen and (max-width: 550px){
+    .setting-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 310px){
+    .setting-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+.shutDown{
+    animation: shutDown 1s ease 1 forwards;
+}
+@keyframes shutDown{
+    from {height: 100px;padding: 1em 0;}
+    to{height: 0px;padding: 0;}
+}
+
+#arial{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#courier{
+    font-family: 'Courier New', Courier, monospace;
+}
+#Lucida{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
