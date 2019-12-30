@@ -1,0 +1,215 @@
+    {% extends 'base.html' %}
+    {% load static %}
+
+    {% block header %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <link rel="stylesheet" href="{% static 'css/default.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/taskbar.css' %}" />
+
+    {% block desktopHeader %}
+    {% endblock %}
+
+    <style>
+        body{
+            background: url("{% static 'assets/background/background.jpg' %}");
+        }
+    </style>
+
+    {% endblock %}
+    
+    {% block content %}
+
+    {% block desktop %}
+    {% endblock %}
+
+    <div class="start-menu none" id="startMenu">
+
+        <div class="blurred"></div>
+
+        <div class="start-content">
+            <div class="container">
+
+                <h1>
+                    <svg height="40" width="40">
+                        <circle r="10" cx="27" cy="27" fill="rgba(0,0,0,0)" style="stroke: var(--DarkThemeColor);" stroke-width="5" stroke-dasharray="25 7" />
+                    </svg>
+                    MENU
+                </h1>
+
+                <Br>
+
+                <h3 class="start-subhead">Profile</h3>
+
+                <div class="scroll">
+                    <div class="con-inner">
+
+                        <a href="/portfolio-profile" target="_blank" style="background: #ff3333;" class="box">
+                            <div>
+                                <center>
+                                    <i class="fa fa-user"></i>
+                                    <div style="font-size: 0.85em;">Profile</div>
+                                </center>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+                <h3 class="start-subhead">Get in Touch</h3>
+
+                <div class="scroll">
+                    <div class="con-inner">
+
+                        <a href="mailto:raghav.dhingra15@gmail.com" style="background: #00c6ff;" class="box">
+                            <div>
+                                <center>
+                                    <i class="fas fa-at"></i>
+                                    <div>Mail</div>
+                                </center>
+                            </div>
+                        </a>
+
+                        <a href="https://www.messenger.com/t/raghav.dhingra15" style="background: #0078ff;" class="box">
+                            <div>
+                                <center>
+                                    <i class="fab fa-facebook-messenger"></i>
+                                    <div style="font-size: 0.85em;">Messenger</div>
+                                </center>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+                <h3 class="start-subhead">Social</h3>
+                
+                <div class="scroll" id="scroll">
+                    <div class="con-inner">
+
+                        <a href="https://www.facebook.com/raghav.dhingra15" class="box" style="background: #3b5998 ;">
+                            <div>
+                                <center>
+                                    <i class="fab fa-facebook-f"></i>
+                                    <div>Facebook</div>
+                                </center>
+                            </div>
+                        </a>
+
+                        <a href="https://twitter.com/raghavdhingra15" class="box" style="background: #00acee;">
+                            <div>
+                                <center>
+                                    <i class="fab fa-twitter"></i>
+                                    <div>Twitter</div>
+                                </center>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/raghavdhingra" class="box" style="background: #211F1F;">
+                            <div>
+                                <center>
+                                    <i class="fab fa-github"></i>
+                                    <div>Github</div>
+                                </center>
+                            </div>
+                        </a>
+
+                        <a href="https://www.instagram.com/raghav.dhingra15/" class="box" style="background: rgb(228, 64, 95);">
+                            <div>
+                                <center>
+                                    <i class="fab fa-instagram"></i>
+                                    <div>Instagram</div>
+                                </center>
+                            </div>
+                        </a>
+
+                        <a href="https://plus.google.com/108681038809854628624" class="box" style="background: rgb(221, 75, 57);">
+                            <div>
+                                <center>
+                                    <i class="fab fa-google-plus"></i>
+                                    <div>Google+</div>
+                                </center>
+                            </div>
+                        </a>
+
+                        <Br>
+                            
+                        <a href="mailto:raghav.dhingra15@gmail.com" class="box" style="background: rgb(220,74,61);">
+                            <div>
+                                <center>
+                                    <img src="{% static 'assets/icons/gmail.svg' %}" alt="G-mail Icon" width="35px" />
+                                    <div>Gmail</div>
+                                </center>
+                            </div>
+                        </a>
+
+                        <a href="https://codepen.io/raghav-dhingra" class="box" style="background: #AE63E4;">
+                            <div>
+                                <center>
+                                    <i class="fab fa-codepen"></i>
+                                    <div>Codepen</div>
+                                </center>
+                            </div>
+                        </a>
+
+                        <a class="right-pointer" id="scrollBtn" style="background: rgba(0,0,0,0);">
+                            <div>
+                                <center>
+                                    <img src="{% static 'assets/icons/right.svg' %}" alt="Right Scroll Icon" width="30px" />
+                                    <div>Scroll</div>
+                                </center>
+                            </div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/raghav-dhingra-168a41168/" class="box" style="background: #0e76a8;">
+                            <div>
+                                <center>
+                                    <i class="fab fa-linkedin"></i>
+                                    <div>Linkedin</div>
+                                </center>
+                            </div>
+                        </a>
+                        
+                        <a href="https://t.me/raghavdhingra" class="box" style="background: #0088cc;">
+                            <div>
+                                <center>
+                                    <i class="fab fa-telegram-plane"></i>
+                                    <div>Telegram</div>
+                                </center>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="task-bar">
+        <div class="start-icon" onclick="openStart();">
+            <svg id="start-circle" height="50" width="50">
+                <circle class="start-circle" r="15" cx="25" cy="25" />
+            </svg>
+        </div>
+
+        <div class="taskbar-explorer-icon none" id="taskbar-explorer-icon">
+            <img id="taskbar-explorer-icon-image" style="margin-top: 0.3em" src="{% static 'assets/icons/setting1.svg' %}" alt="Taskbar Explorer Icon" width="50px"/>
+        </div>
+
+        <div class="taskbar-date">
+            <div>
+                <div style="text-align: center;" id="taskbarTime">12:00</div>
+                <div id="taskbarDate">27-Nov, 2019</div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block script %}
+    <script src="{% static 'js/taskbar.js' %}"></script>
+    <script src="{% static 'js/date.js' %}"></script>
+
+    {% block Desktopscript %}
+    {% endblock %}
+
+    {% endblock %}

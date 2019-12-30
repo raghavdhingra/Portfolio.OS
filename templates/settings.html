@@ -1,0 +1,85 @@
+{% extends 'desktop.html' %}
+{% load static %}
+
+{% block settings %}
+
+<div id="setting-content" class="none">
+    <div class="setting-inner">
+        <h1 style="text-align: center;margin: 1em 0;"> Settings </h1>
+        <div>
+            <div class="setting-on-click none" id="setting-on-click">
+
+                <div id="changeTheme" class="none">
+                    <span style="font-size: 1.5em;">Change Theme</span>
+                    <div style="margin-top: 1em;">
+                        <div class="color-palette color-palette-active" id="darkTheme" style="background: #000;"></div>
+                        <div class="color-palette" id="lightTheme"></div>
+                    </div>
+                </div>
+
+                <div id="changeFont" class="none">
+                    <span style="font-size: 1.5em;">Change Font</span>
+                    <div style="margin-top: 1em;">
+                        <div class="font-palette color-palette-active" id="arial">Arial</div>
+                        <div class="font-palette" id="courier">Courier</div>
+                        <div class="font-palette" id="Lucida">Lucida</div>
+                    </div>
+                </div>
+
+                <div id="fontSize" class="none">
+                    <span style="font-size: 1.5em;">Font Size</span>
+                    <div style="margin-top: 1em;">
+                        <div class="size-palette" onclick="decreaseFont();">A-</div>
+                        <div class="size-palette" onclick="resetFont();">&nbsp;A&nbsp;</div>
+                        <div class="size-palette" onclick="increaseFont();">A+</div>
+                    </div>
+                </div>
+
+                <div id="translate" class="none">
+                    <span style="font-size: 1.5em;">Translate</span>
+                    <div style="margin-top: 1em;">
+                        <div id="google_translate_element"></div>  
+                        <!-- <div class="size-palette color-palette-active">English (IN)</div>
+                        <div class="size-palette">हिन्दी</div> -->
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="setting-grid">
+            <div class="setting-item" id="changeThemeBtn">
+                <img src="{% static 'assets/icons/theme.svg' %}" alt="Change Theme" width="60px" />
+                <br><Br>
+                Change Theme
+            </div>
+            <div class="setting-item" id="changeFontBtn">
+                <img src="{% static 'assets/icons/font.svg' %}" alt="Change Font" width="60px" />
+                <br><Br>
+                Change Font
+            </div>
+            <div class="setting-item" id="fontSizeBtn">
+                <img src="{% static 'assets/icons/font1.svg' %}" alt="Change Font Size" width="60px" />
+                <br><Br>
+                Font Size
+            </div>
+            <div class="setting-item" id="translateBtn">
+                <img src="{% static 'assets/icons/translate.svg' %}" alt="Translate Portfolio" width="60px" />
+                <br><Br>
+                Translate
+            </div>
+            <div class="setting-item" id="resetBtn">
+                <img src="{% static 'assets/icons/reset.svg' %}" alt="Reset Everything" width="60px" />
+                <br><Br>
+                Reset Settings
+            </div>
+            <a href="mailto:raghav.dhingra15@gmail.com" class="setting-item" id="suggestionBtn">
+                <img src="{% static 'assets/icons/about.svg' %}" alt="Suggestions" width="60px" />
+                <br><Br>
+                Any Suggestions
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
