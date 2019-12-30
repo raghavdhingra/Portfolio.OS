@@ -1,0 +1,83 @@
+{% extends 'taskbar.html' %}
+{% load static %}
+
+    {% block desktopHeader %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <link href="{% static 'css/explorer.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/default.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/desktop.css' %}" rel="stylesheet" />
+    {% endblock %}
+
+
+    {% block desktop %}
+
+    <div class="explorer none" id="explorer">
+        <div class="title-bar">
+            <div class="title-icon cross" id="close-explorer"> &nbsp;<i class="fas fa-times"></i></div>
+            <div class="title-icon" id="maximize">&nbsp;<i class="fas fa-window-maximize"></i></div>
+            <div class="title-icon" id="minimize">&nbsp;<i class="fas fa-minus"></i></div>
+            <span>File Explorer</span>
+            <div class="explorer-title" id="explorer-title"></div>
+        </div>
+        <div class="explorer-content" id="explorer-content">
+
+            <div id="profile-content" class="none">
+                <iframe id="profile-iframe" class="explorer-frame"></iframe>
+            </div>
+
+            <div id="project-content" class="none">
+                <iframe id="project-iframe" class="explorer-frame"></iframe>
+            </div>
+
+            <div id="personal-content" class="none">
+                Favorite Music,game, video, youtube channel, hobby
+            </div>
+
+            <div id="browser-content" class="none">
+                <i class="fa fa-search"></i><input type="text" class="url-bar" id="url-bar" placeholder="Search..."/><button class="search" id="searchBtn">Go</button>
+                <iframe id="browser-iframe" class="explorer-frame"></iframe>
+            </div>
+            
+            {% block settings %}
+            {% endblock %}
+
+        </div>
+    </div>
+    
+    <div class="upper-bar" id="upper-bar"> 9:30am </div>
+
+    <div class="desktop-container">
+        <div class="desktop-icons" id="profile">
+            <img src="{% static 'assets/icons/resume.svg' %}" alt="Resume Desktop Icon" width="60px" />
+            <Br>
+            Profile
+        </div>
+        <div class="desktop-icons" id="project">
+            <img src="{% static 'assets/icons/project.svg' %}" alt="Project Desktop Icon" width="60px" />
+            <Br>
+            Projects
+        </div>
+        <div class="desktop-icons" id="personal">
+            <img src="{% static 'assets/icons/folder1.svg' %}" alt="Folder Desktop Icon" width="60px" />
+            <Br>
+            Personal
+        </div>
+        <div class="desktop-icons" id="browser">
+            <img src="{% static 'assets/icons/browser.svg' %}" alt="Browser Desktop Icon" width="60px" />
+            <Br>
+            Browser
+        </div>
+        <div class="desktop-icons" id="setting">
+            <img src="{% static 'assets/icons/setting1.svg' %}" alt="Setting Desktop Icon" width="60px" />
+            <Br>
+            Settings
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block Desktopscript %}
+
+    <script src="{% static 'js/desktop.js' %}"></script>
+    <script src="{% static 'js/settings.js' %}"></script>
+
+    {% endblock %}

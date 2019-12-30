@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:type" content="Portfolio" />
+    <meta property="og:url" content=”https://raghavdhingra.com” />
+    <meta property="og:description" content="Hey There, I am Raghav Dhingra - a Full Stack Web Developer and an active Open Source Contributor. You can view my Portfolio.OS - my personal portfolio website." />
+    <title> {{title}} </title>
+    <meta name="title" content="Raghav Dhingra | Full Stack Web Developer | Portfolio.OS" />
+    <meta name="description" content="Hey There, I am Raghav Dhingra - a Full Stack Web Developer and an active Open Source Contributor. You can view my Portfolio.OS - my personal portfolio website." />
+    <meta name="google-site-verification" content="oYtwC3oLSVG8zwp-G2Ap8cSDgDq9Jkpol2YUVgRT9S8" />
+    <link href="{% static 'assets/background/me-icon.png' %}" rel="icon" />
+    <link rel="canonical" href="https://raghavdhingra.com" />
+
+    {% block header %}
+    {% endblock %}
+
+</head>
+<body>
+    
+    {% block content %}
+    {% endblock %}
+
+    {% block script %}
+    {% endblock %}
+    <script type="text/javascript">  
+        function googleTranslateElementInit() {  
+            new google.translate.TranslateElement( 
+                {pageLanguage: 'en'},  
+                'google_translate_element' 
+            );  
+        }  
+    </script>  
+        <style>
+            .goog-te-banner-frame.skiptranslate{
+                display: none !important;
+            }
+            .skiptranslate{
+                color: #fff;
+            }
+            .goog-te-combo{
+                padding: 0.5em 2em;
+            }
+            .goog-te-combo:focus{
+                outline: none;
+            }
+            .goog-te-combo,.goog-te-combo>option{
+                color: #000 !important;
+            }
+            body{top:0 !important;}
+        </style>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"> 
+    </script> 
+
+</body>
+</html>
