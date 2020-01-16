@@ -15,17 +15,35 @@
     <link href="{% static 'assets/background/me-icon.png' %}" rel="icon" />
     <link rel="canonical" href="https://raghavdhingra.com" />
 
+    <link href="{% static 'css/loader.css' %}" rel="stylesheet" />
+
     {% block header %}
     {% endblock %}
 
 </head>
 <body>
-    
+    <div class="loader-overlay">
+        <div class="Portfolio-Loader">
+            <svg height="200" width="200">
+                <circle class="svg-Loader-circle" cx="100" cy="100" r="95" stroke="#231f20" stroke-width="10" fill-opacity="0" />
+            </svg>
+        </div>
+        <div class="PortFolio-Loader-Logo"></div>
+        <div class="PortFolio-Loader-Logo-Text">
+            <span class="loader-percentage-container"><span id="loader-loading-percentage">0</span>%</span>
+        </div>
+        <div class="PortFolio-Loader-Logo-Text">
+            <span class="hey-there-none">Hey There!</span>
+        </div>
+    </div>
     {% block content %}
     {% endblock %}
 
     {% block script %}
     {% endblock %}
+
+    <script src="{% static 'js/loader.js' %}"></script>
+
     <script type="text/javascript">  
         function googleTranslateElementInit() {  
             new google.translate.TranslateElement( 
