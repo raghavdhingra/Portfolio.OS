@@ -14,8 +14,8 @@ const iframeProject = document.getElementById("project-iframe");
 const browserContent = document.getElementById("browser-content");
 const profileContent = document.getElementById("profile-content");
 const projectContent = document.getElementById("project-content");
-const personalContent = document.getElementById("personal-content");
 const settingContent = document.getElementById("setting-content");
+const personalContent = document.getElementById("personal-content");
 
 var maximizeCount = 0;
 
@@ -84,8 +84,8 @@ if (window.innerWidth >= 800){
         taskbarExplorerIconImage.src = `/static/assets/icons/browser.svg`;
 
         if (iframeBrowser.src == ""){
-            urlBar.value = "https://www.searchencrypt.com/";
-            iframeBrowser.src = "https://www.searchencrypt.com/";
+            urlBar.value = "https://www.searchencrypt.com/?ptc=://mail";
+            iframeBrowser.src = "https://www.searchencrypt.com/?ptc=://mail";
         }
     });
 
@@ -168,8 +168,8 @@ else{
         taskbarExplorerIconImage.src = `/static/assets/icons/browser.svg`;
         
         if (iframeBrowser.src == ""){
-            urlBar.value = "https://www.searchencrypt.com/";
-            iframeBrowser.src = "https://www.searchencrypt.com/";
+            urlBar.value = "https://www.searchencrypt.com/?ptc=://mail";
+            iframeBrowser.src = "https://www.searchencrypt.com/?ptc=://mail";
         }
     });
 
@@ -248,7 +248,7 @@ const searchFun = () => {
         }, 500);
     }
     else {
-        iframeBrowser.src=`${searchUrl}${urlVal}`;
+        iframeBrowser.src=`${searchUrl}${urlVal}&ptc=://mail`;
         setTimeout(() => {
             urlBar.value = iframeBrowser.src;
         }, 500);
