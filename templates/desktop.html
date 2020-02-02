@@ -30,11 +30,44 @@
             </div>
 
             <div id="personal-content" class="none">
-                <div class="setting-item">
-                    <div style="height: 60px;width: 60px;background:url({% static 'assets/icons/youtube.svg' %}) cover no-repeat;"></div>
-                    <br><Br>
-                    Youtube
+                
+                <div class="setting-inner">
+                    <h1 style="text-align: center;margin: 1em 0;"> Personal Folder </h1>
+            
+                    <div class="setting-grid">
+                        <a href="https://www.youtube.com/channel/UCWcU9nzOKVu7_zY5aN7yN3w" target="_blank" class="setting-item">
+                            <img src="{% static 'assets/icons/yout.svg' %}" alt="you-tube" width="60px" />
+                            <br><Br>
+                            Youtube
+                        </a>
+                        <a href="https://open.spotify.com/playlist/592HczuLdWbhxY4QU0Fqyq?si=GiT0lbTwSgilhmudvS3hcw" target="_blank" class="setting-item">
+                            <img src="{% static 'assets/icons/music.svg' %}" alt="Music" width="60px" />
+                            <br><Br>
+                            Fav Music
+                        </a>
+                        <a href="https://www.instagram.com/raghav.dhingra15/" target="_blank" class="setting-item">
+                            <img src="{% static 'assets/icons/photo.svg' %}" alt="Pics" width="60px" />
+                            <br><Br>
+                            Photos
+                        </a>
+                        <a href="https://medium.com/@raghav.dhingra15" target="_blank" class="setting-item">
+                            <img src="{% static 'assets/icons/blogs.svg' %}" alt="Blogs" width="60px" />
+                            <br><Br>
+                            Blogs
+                        </a>
+                        <a href="{% url 'portfolio' %}" target="_blank" class="setting-item">
+                            <img src="{% static 'assets/icons/cv.svg' %}" alt="Portfolio" width="60px" />
+                            <br><Br>
+                            Curriculum Vitae
+                        </a>
+                        <a href="{% url 'projects' %}" target="_blank" class="setting-item">
+                            <img src="{% static 'assets/icons/project-1.svg' %}" alt="work" width="60px" />
+                            <br><Br>
+                            My work
+                        </a>
+                    </div>
                 </div>
+
             </div>
 
             <div id="browser-content" class="none">
