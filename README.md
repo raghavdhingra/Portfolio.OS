@@ -147,6 +147,6 @@ razorpay==1.0.3
 ```
 as a result.
 
-## Fork this repo and make it all yours
+### Fork this repo
 
 # Happy Coding :)
