@@ -139,6 +139,12 @@ razorpay==1.0.3
 ```
 as a result.
 
+##### Previous Domains:
+https://raghavdhingra.social
+https://raghavdhingra.engineer
+https://raghavdhingra.co
+https://raghavdhingra.me
+
 ### Fork this repo
 
 # Happy Coding :)
