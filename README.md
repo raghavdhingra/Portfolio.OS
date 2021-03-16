@@ -1,10 +1,15 @@
 # Portfolio-OS
 It's my personal portfolio and Open-Sourced under MIT License. You can fork and use it as boiler plate for your portfolio.
 
+# ** Note **
+This is an old repository. Please heads up to https://github.com/raghavdhingra/OS_2_Server, for the latest changes.
+
 ### Initialising the revolutionary Operating System.
 #### Stay Tuned.
 
-https://portfolio.raghavdhingra.com
+https://archive.raghavdhingra.com
+
+https://raghavdhingra.tech
 
 If you want particular components or designs of this portfolio, go to https://github.com/raghavdhingra/Portfolio-OS-Prototype
 It contains all the designs in simple html/css and js.
