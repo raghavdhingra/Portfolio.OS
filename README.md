@@ -4,15 +4,7 @@ It's my personal portfolio and Open-Sourced under MIT License. You can fork and 
 ### Initialising the revolutionary Operating System.
 #### Stay Tuned.
 
-https://raghavdhingra.me
-
-https://raghavdhingra.com
-
-https://raghavdhingra.social
-
-https://raghavdhingra.engineer
-
-https://raghavdhingra.co
+https://portfolio.raghavdhingra.com
 
 If you want particular components or designs of this portfolio, go to https://github.com/raghavdhingra/Portfolio-OS-Prototype
 It contains all the designs in simple html/css and js.
